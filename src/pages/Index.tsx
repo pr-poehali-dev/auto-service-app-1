@@ -118,7 +118,7 @@ const Index = () => {
       <div className="mb-6">
         <h2 className="text-xl font-bold text-white mb-4">Популярные услуги</h2>
         <div className="space-y-3">
-          {['Диагностика двигателя', 'Замена масла', 'Шиномонтаж', 'Развал-схождение'].map((service, idx) => (
+          {['Ремонт бампера', 'Полировка кузова', 'Полный окрас'].map((service, idx) => (
             <Card key={idx} className="p-4 bg-card border-border hover:border-primary transition-colors cursor-pointer">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
