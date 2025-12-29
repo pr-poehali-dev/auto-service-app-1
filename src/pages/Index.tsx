@@ -72,7 +72,7 @@ const Index = () => {
   const renderHome = () => (
     <div className="pb-24 animate-fade-in">
       <div className="bg-gradient-to-br from-primary via-secondary to-accent p-6 rounded-3xl mb-6 animate-scale-in">
-        <h1 className="text-3xl font-bold text-white mb-2">Автосервис</h1>
+        <h1 className="text-3xl font-bold text-white mb-2">PogodinAUTO</h1>
         <p className="text-white/90 text-sm">Профессиональный ремонт вашего автомобиля</p>
       </div>
 
