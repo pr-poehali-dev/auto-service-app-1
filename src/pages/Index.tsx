@@ -5,9 +5,11 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Icon from '@/components/ui/icon';
 import { Progress } from '@/components/ui/progress';
+import BookingCalendar from '@/components/BookingCalendar';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('home');
+  const [showBooking, setShowBooking] = useState(false);
 
   const orders = [
     {
@@ -77,7 +79,10 @@ const Index = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-4 mb-6">
-        <Card className="p-4 bg-card border-border hover:scale-105 transition-transform cursor-pointer animate-slide-up">
+        <Card 
+          onClick={() => setShowBooking(true)}
+          className="p-4 bg-card border-border hover:scale-105 transition-transform cursor-pointer animate-slide-up"
+        >
           <div className="bg-primary/20 w-12 h-12 rounded-2xl flex items-center justify-center mb-3">
             <Icon name="Calendar" className="text-primary" size={24} />
           </div>
@@ -297,6 +302,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {showBooking && <BookingCalendar onClose={() => setShowBooking(false)} />}
+      
       <div className="max-w-md mx-auto px-4 pt-6">
         {activeTab === 'home' && renderHome()}
         {activeTab === 'orders' && renderOrders()}
